@@ -3,16 +3,8 @@ import { useEffect } from 'react'
 import { Capacitor } from '@capacitor/core';
 import './App.css'
 import { CapNotify } from '../cap-notification-listener'
+import { AppListReturn, ProcessedPackageInfo } from './typings'
 
-interface ProcessedPackageInfo {
-  packageName: string;
-  name: string;
-  icon: Blob;
-}
-
-interface AppListReturn {
-  appList: string;
-}
 
 function App() {
   const [apps, setApps] = useState<AppListReturn>({appList: ""})

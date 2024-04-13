@@ -24,6 +24,10 @@ function App() {
     }
   }, [apps])
 
+  useEffect(() => {
+    console.log(`Processed package info: ${JSON.stringify(processedPackageInfo)}`);
+  }, [processedPackageInfo])
+
   return (
     <>
       <AppInfoDisplay {...processedPackageInfo} />

@@ -1,1 +1,1 @@
-export {AppInfoDisplay} from './components';
+export {AppInfoDisplay, AppInfoItem} from './components';

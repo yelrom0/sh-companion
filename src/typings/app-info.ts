@@ -7,3 +7,7 @@ export interface ProcessedPackageInfo {
 export interface AppListReturn {
     appList: string;
 }
+
+export interface AppInfoItemProps extends ProcessedPackageInfo {
+    id: number;
+}

@@ -11,3 +11,7 @@ export interface AppListReturn {
 export interface AppInfoItemProps extends ProcessedPackageInfo {
     id: number;
 }
+
+export interface AppInfoProps {
+    packageList: ProcessedPackageInfo[];
+}

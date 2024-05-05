@@ -18,19 +18,21 @@ function App() {
   }, [])
 
   useEffect(() => {
+    // console.log(`Apps: ${JSON.stringify(apps)}`)
     if (apps.appList.length > 0) {
+      console.log(`Apps in if: ${apps.appList}`)
       const appList: ProcessedPackageInfo[] = JSON.parse(apps.appList)
       setProcessedPackageInfo(appList)
     }
   }, [apps])
 
-  useEffect(() => {
-    console.log(`Processed package info: ${JSON.stringify(processedPackageInfo)}`);
+  useEffect(() => { 
+    // console.log(`Processed package info: ${JSON.stringify(processedPackageInfo)}`);
   }, [processedPackageInfo])
 
   return (
     <>
-      <AppInfoDisplay {...processedPackageInfo} />
+      <AppInfoDisplay packageList={processedPackageInfo} />
     </>
   )
 }
